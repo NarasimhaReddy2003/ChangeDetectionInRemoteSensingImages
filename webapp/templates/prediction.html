@@ -1,0 +1,66 @@
+{% extends 'home.html' %}
+
+{% block navbar %}
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link" href="{% url 'home' %}"> <h5>Home</h5> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a style="color: yellow;" class="nav-link active" href="{% url 'prediction' %}"><h5>prediction</h5> </a>
+      </li>
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link" href="{% url 'index' %}">LogOut</a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <section style="margin-top: -80px;" class="contact_section layout_padding">
+    <div class="container">
+          {% if path %}
+            <center>
+              <h2 style="color: yellow;">Predicted Image</h2>
+              <img src="/static/output/refined.jpg" height="300px" width="300px"><br><br>
+              
+              <div class="d-flex" style="margin-left: 500px;">
+                  <a href="/static/output/refined.jpg" class="btn btn-success" download="filename">Download link</a>
+              </div>
+            </center>
+          {% endif %}
+
+      <div class="row">
+        <div style="margin-left: 300px; margin-top: 20px;" class="col-md-6">
+          <form action="{% url 'prediction' %}" method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <div>
+              <center>
+                <label for="file1" style="color: white; font-size: 20px;">Image 1</label>
+                <input style="border-radius: 5px; color: black;" type="file" name="file1" id="file1" required/>
+              </center>
+            </div>
+
+            <div>
+              <center>
+                <label for="file2" style="color: white; font-size: 20px;">Image 2</label>
+                <input style="border-radius: 5px; color: black;" type="file" name="file2" id="file2" required/>
+              </center>
+            </div>
+
+            <div class="d-flex ">
+              <center>
+                <button style="margin-left: 180px; border-radius: 5px;" type="submit">
+                  Submit
+                </button>
+              </center>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

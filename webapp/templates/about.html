@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ">
+            <li class="nav-item">
+            <a style="color: white; font-size: 20px;" class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            <a style="color: yellow; font-size: 20px;" class="nav-link active" href="{% url 'about' %}">About </a>
+            </li>
+            <li class="nav-item">
+            <a style="color: white; font-size: 20px;" class="nav-link" href="{% url 'register' %}"> Register</a>
+            </li>
+            <li class="nav-item">
+            <a style="color: white; font-size: 20px;" class="nav-link" href="{% url 'login' %}">LogIn</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+    
+{% block content %}
+    <center>
+    <section style="padding: 100px; color: white;" class="slider_section ">
+        <div class="detail-box">
+        <h5 style="text-align: justify;">
+            change detection is a crucial task in various domains, including remote sensing, surveillance, and environmental monitoring. This project focuses on enhancing the accuracy and efficiency of detecting changes at the object level by leveraging advanced deep learning techniques. The approach aims to identify and quantify alterations in objects within images over time, providing valuable insights into dynamic environments. By employing sophisticated deep learning methods, the project seeks to improve the precision of change detection, reduce false positives, and handle complex scenarios with diverse object types and varying conditions. The ultimate goal is to offer a robust and scalable solution for real-world applications where understanding object-level changes is critical.
+        </h5><br>
+
+        <h4 style="color: yellow;">
+            "Detecting Change with Precision: Revolutionizing Object-Level Insights Through Deep Learning."
+        </h4>
+        </div>
+    </section>
+    </center>
+{% endblock %}

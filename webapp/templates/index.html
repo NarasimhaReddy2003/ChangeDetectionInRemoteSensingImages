@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>change detection in remote sensing images</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+
+  <style>
+    body {
+        background-image: url('/static/images/qq.webp');
+        background-size:cover; /* Adjust as needed */
+        background-position: center; 
+        height: 650px;
+        };
+  </style>
+</head>
+
+<div style="background-color: rgba(30, 13, 107, 0.576); min-height: 650px;">
+  <body>
+    <header class="header_section">
+      <div style="background-color: rgba(255, 255, 255, 0.438);" class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="#">
+              <img style="height: 50px;" src="/static/images/icons8-objects-64.png">
+              <span style="color: white;">
+                change detection in remote sensing images
+              </span>
+            </a>
+
+            {% block navbar %}
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                  <li class="nav-item">
+                    <a style="color: yellow; font-size: 20px;" class="nav-link active" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a style="color: white; font-size: 20px;" class="nav-link" href="{% url 'about' %}">About </a>
+                  </li>
+                  <li class="nav-item">
+                    <a style="color: white; font-size: 20px;" class="nav-link" href="{% url 'register' %}"> Register</a>
+                  </li>
+                  <li class="nav-item">
+                    <a style="color: white; font-size: 20px;" class="nav-link" href="{% url 'login' %}">LogIn</a>
+                  </li>
+                </ul>
+              </div>
+            {% endblock %}
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    {% block content %}
+      <!-- <center> -->
+
+        <section style="margin-top: 200px; margin-left: 110px; " class="slider_section ">
+          <div class="detail-box">
+            <h1 style="color: white; margin-left: 470px; font-size: 70px;">
+              WELCOME!<br>
+            </h1>
+            <a style="color: white; width: 200px; margin-left: 470px;" href="{% url 'register' %}">
+              Register
+            </a>
+            <a style="color: white; width: 200px; margin-left: 20px;" href="{% url 'login' %}">
+              Login
+            </a>
+          </div>
+        </section>
+      <!-- </center> -->
+    {% endblock %}
+
+  {% if message %}
+    <script>
+      alert("{{ message }}")        
+    </script>
+  {% endif %}
+
+  <script src="/static/js/jquery-3.4.1.min.js"></script>
+  <script src="/static/js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="/static/js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+
+</body>
+</div>
+
+
+</html>
